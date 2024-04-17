@@ -1,4 +1,4 @@
-name: ci backend
+name: ci
 
 on:
   merge_group:
