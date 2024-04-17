@@ -5,10 +5,10 @@ import (
 	"slices"
 )
 
+// twoPointers algorithm has O(n^2) complexity and O(1) allocation
 func twoPointers(nums []int, target int) []int {
 	slices.Sort(nums)
 	n := len(nums)
-	r := make([]int, 0, n)
 	for i := 0; i < n; i++ {
 		if i > 0 && nums[i] == nums[i-1] {
 			continue
@@ -25,7 +25,7 @@ func twoPointers(nums []int, target int) []int {
 			}
 		}
 	}
-	return r
+	return []int{}
 }
 
 func main() {
